@@ -1,1 +1,0 @@
-# Lung-Segmentation-of-2D-and-3D-Scans
