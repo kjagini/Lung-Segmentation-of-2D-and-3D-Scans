@@ -53,26 +53,18 @@ uploaded_file = st.file_uploader("Choose an npy file...", type="npy")
 if uploaded_file is not None:
     # Read the npy file and display it
     loaded_data = np.load(uploaded_file)
-    
-    st.write("Original Image and Predicted Image")
-    # Create a box around the images
-    box_style = "border:2px solid #4CAF50;border-radius:5px;padding:10px;margin-bottom:20px;"
-    st.markdown(f'<div style="{box_style}">', unsafe_allow_html=True)
+    st.write("Original Image")
+    plt.figure(figsize=(8, 8))
 
-    # Display the original image and predicted image side by side
-    col1, col2 = st.beta_columns(2)
-    with col1:
-        st.write("Original Image")
-        plt.figure(figsize=(8, 8))
-        plt.imshow(loaded_data[0][100])
-        plt.axis('off')
-        st.pyplot()
-    with col2:
-        st.write("Predicted Image")
-        plt.figure(figsize=(8, 8))
-        plt.imshow(get_the_prediction((loaded_data))[0][100])
-        plt.axis('off')
-        st.pyplot()
+    plt.imshow(loaded_data[0][100])
+    st.pyplot()
 
-    # Close the box around the images
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Run the prediction
+    prediction = get_the_prediction((loaded_data))
+
+    # Display the prediction
+    st.write("Predicted Image")
+    plt.figure(figsize=(8, 8))
+
+    plt.imshow(prediction[0][100])
+    st.pyplot()
