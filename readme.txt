@@ -1,4 +1,11 @@
 README
+To run the application follow the commands below:
+python -m venv myenv
+source myenv/bin/activate      # On Windows, use "myenv\Scripts\activate"
+pip install -r requirements.txt
+streamlit run Lung_Seg_App.py
+
+
 This code uses Convolutional LSTM (ConvLSTM) to perform segmentation on medical images. Specifically, it takes in a 5D input array (with dimensions corresponding to batch size, time steps, height, width, and channels) and predicts the corresponding segmentation output.
 
 Dependencies
