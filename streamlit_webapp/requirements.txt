@@ -1,7 +1,7 @@
-tensorflow
-Keras
-Keras-Applications
-Keras-Preprocessing
+tensorflow==2.4.0
+Keras==2.4.3
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.2
 scikit-image
 nibabel
 matplotlib
