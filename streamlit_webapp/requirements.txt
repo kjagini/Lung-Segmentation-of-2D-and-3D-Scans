@@ -1,9 +1,9 @@
-tensorflow==2.6.0
+tensorflow
 Keras
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.2
-scikit-image==0.19.3
-nibabel==5.0.1
-matplotlib==3.3.2
+Keras-Applications
+Keras-Preprocessing
+scikit-image
+nibabel
+matplotlib
 numpy
 streamlit
