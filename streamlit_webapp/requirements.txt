@@ -5,5 +5,5 @@ Keras-Preprocessing==1.1.2
 scikit-image==0.19.3
 nibabel==5.0.1
 matplotlib==3.3.2
-numpy==1.19.3
+numpy
 streamlit
